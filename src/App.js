@@ -9,7 +9,7 @@ const App = () => {
   return(
     <div className="App-header">
       <NavbarComp  />
-      <ItemListContainer greeting = "Bienvenido a mi ecommerce"/>
+      <ItemListContainer greeting = "Bienvenido a mi E-commerce"/>
     </div>  
   );
 };
