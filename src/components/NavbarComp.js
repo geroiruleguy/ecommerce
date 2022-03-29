@@ -1,16 +1,14 @@
 import React from "react";
 import NavbarStyle from "./NavbarStyle.css";
-import logo from "./imgs/logo-ejemplo.jpg";
 import {Navbar, Container, Nav} from "react-bootstrap" 
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { CartWidget } from "./CartWidgets/CartWidget";
 
 
 export const NavbarComp = () => {
     return (
         <div>
-        <img src={logo} alt="logo"/>    
-        <h1>REVIVAL </h1>
-        <Navbar bg="light" variant="light">
+        <h1>revival </h1>
+        <Navbar variant="light">
           <Container>
             <Navbar.Brand href="#home"></Navbar.Brand>
               <Nav className="me-auto">
@@ -20,7 +18,7 @@ export const NavbarComp = () => {
               </Nav>
           </Container>
         </Navbar>
-        <ShoppingCartIcon />
+        <CartWidget color = "primary" />
         </div>
     );
 };

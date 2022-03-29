@@ -13,13 +13,12 @@ div{
 }
 h1{
     font-size: 20px;
-    text-align: center;
-}
-img{
-    height: 50px;
-    width: 50px;
+    text-align: start;
+    margin-top: auto;
 }
 
+
 Nav.Link{
-    margin: 10px;
+    margin: 20px;
+
 }

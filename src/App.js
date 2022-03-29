@@ -5,11 +5,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {ItemListContainer} from "./containers/ItemListContainer"
 
 
+
+
 const App = () => {
   return(
     <div className="App-header">
       <NavbarComp  />
-      <ItemListContainer greeting = "Bienvenido a mi E-commerce"/>
+      <ItemListContainer />
+      
+  
     </div>  
   );
 };

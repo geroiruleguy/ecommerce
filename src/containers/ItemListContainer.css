@@ -1,0 +1,18 @@
+h1{
+    font-family: 'Nunito', sans-serif;
+    color: tan
+}
+
+.counter{
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+h2{
+    color:black;
+}
+
+h5{
+    color: black;
+};
