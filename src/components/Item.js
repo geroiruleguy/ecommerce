@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import barritaAmarilla from './imgs/barra-agtal-original.jpg';
 
 const styles = {
   container: {
@@ -29,6 +30,9 @@ export const Item = ({producto}) => {
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             Producto 
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            $1.000
           </Typography>
         </CardContent>
       </CardActionArea>

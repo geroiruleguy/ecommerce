@@ -11,10 +11,10 @@ div{
     margin-top: 5px;
 
 }
-h1{
-    font-size: 20px;
-    text-align: start;
-    margin-top: auto;
+.logo{
+    width: 100px;
+    height: 100px;
+    margin: 50px;
 }
 
 
