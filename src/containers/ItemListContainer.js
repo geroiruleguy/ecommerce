@@ -3,6 +3,7 @@ import "./ItemListContainer.css"
 import { ItemList } from "../components/ItemList";
 import { ListaProductos } from "../Productos/ListaProductos";
 import { useParams } from "react-router-dom"; 
+import { ProductionQuantityLimitsSharp } from "@mui/icons-material";
 
 
 
@@ -18,22 +19,30 @@ export const ItemListContainer = () => {
     
     const [productos, setProductos] = useState([]);
 
-    const {id} = useParams();
+   
+
+    const {name} = useParams();
+    
     
   
     useEffect(() => {
+    
+
         promise
         .then((productos) => {
-            if(id){
-            //guardar en productos un filter de productos con id
-            } else {
-            setProductos(productos);
-            }  
-        })
-          .catch((error) => {
+
+                if(name) {
+                    setProductos(productos.filter(p=>p.category == name ))
+                
+                } else  {
+                setProductos(productos)
+                } 
+            })
+        
+        .catch((error) => {
             console.error("error: ", error);
           });
-      }, [id]);
+      }, [name]);
   
 
     return(
