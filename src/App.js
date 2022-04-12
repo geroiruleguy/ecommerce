@@ -26,9 +26,8 @@ const App = () => {
         <NavbarComp  />
         <Routes>  
           <Route path="/" element={<ItemListContainer />} />
-          <Route path="productos/categories/:name" element={<ItemListContainer />} />
-          <Route path="/item/:name" element={<ItemDetailContainer />} />
-          
+          <Route path="/categories/:categoryID" element={<ItemListContainer />} />
+          <Route path="/product/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<Error />} />
         </Routes>

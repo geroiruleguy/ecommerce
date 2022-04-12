@@ -6,18 +6,19 @@ import logo from "./imgs/logo.png";
 import {NavLink, Link} from "react-router-dom";
 
 
+const categories = [
+  { name: "Barra de Cereal", route: "categories/barraCereal", id: "barraCereal"},
+  { name: "Barra de Arroz", route: "categories/barraArroz", id: "barraArroz" },
+  { name: "Snacks", route: "categories/snacks", id: "snacks"},
+  { name: "Mix Frutos Secos", route: "categories/mixed", id: "mixed"},
+]
+
+
 export const NavbarComp = () => {
-
-  const categories = [
-    { name: "Home", route: "categories/home", id: 1},
-    { name: "Productos", route: "categories/productos", id: 2},
-    { name: "Nosotros", route: "categories/nosotros", id: 3},
-  ]
-
 
     return (
         <div>
-          <NavLink to="">
+          <NavLink to="/">
             <img className="logo" src={logo} alt="logo" />
             
           </NavLink>
@@ -26,9 +27,12 @@ export const NavbarComp = () => {
           <Container>
             <Navbar.Brand to="home"></Navbar.Brand>
               <Nav className="me-auto">
-                  <NavLink to= "#home">Home</NavLink>
-                  <NavLink to="#category/producto1">Productos</NavLink>
-                  <NavLink to="#nosotros">Nosotros</NavLink>
+                {categories.map((element) => {
+                  return(
+                  <NavLink key={element.id}  to={element.route} >{element.name}</NavLink>
+                  );
+                })};
+                  
               </Nav>
           </Container>
         </Navbar>

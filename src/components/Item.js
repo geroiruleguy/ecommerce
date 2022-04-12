@@ -5,6 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import barritaAmarilla from './imgs/barra-agtal-original.jpg';
+import {useNavigate,} from "react-router-dom";
 
 const styles = {
   container: {
@@ -18,7 +19,15 @@ const styles = {
 };
 
 export const Item = ({producto}) => {
+  
+  const path = useNavigate()
+  const navegar = () => {
+    path("/categories/item" + producto.id)
+  }
+  
   return(
+
+
     <Card sx={{ maxWidth: 345 }} style={styles.container}>
       <CardActionArea>
         <CardMedia

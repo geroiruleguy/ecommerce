@@ -1,29 +1,35 @@
 import React from "react";
 
-export const ListaProductos = [
+
+export const ListaProductos = () => {
+    [
         { 
             id: 1, 
             title: "Producto1", 
             price: 1000, 
-            category: "producto1"
+            category: "barraCereal",
+            img: '../components/imgs/barra-agtal-original.jpg'
         },
         { 
             id: 2, 
             title: "Producto2", 
             price: 1000,
-            category: "producto2" 
+            category: "barraArroz", 
+            img: '../components/imgs/barra-crowie-frutilla.jpg'
         },
         { 
             id: 3, 
             title: "Producto3", 
             price: 1000, 
-            category: "producto3"
+            category: "snack",
+            img: '../components/imgs/snack-deluxe-verdeo.jpg'
         },
         { 
             id: 4,
             title: "Producto4", 
             price: 1000,
-            category: "producto4" 
+            category: "mix",
+            img: '../components/imgs/mix-nuts.jpg' 
         },
         { 
             id: 5,
@@ -37,4 +43,7 @@ export const ListaProductos = [
             price: 1000,
             category: "producto6" 
         },
-    ];
+    ]
+
+   
+};
