@@ -36,11 +36,11 @@ export const ItemDetail = (productos) => {
      
       const [clicked, setClicked] = useState(false)
       const onAdd =(contador, id)=>{
-        let itemsParaElCarrito=[contador,id]
+        let cartItems=[contador,id]
             
         setClicked(true)
             console.log(`estas comprando ${contador} productos con id ${id}` )
-            console.log(itemsParaElCarrito)
+            console.log(cartItems)
         
         }
       

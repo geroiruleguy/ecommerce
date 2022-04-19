@@ -27,7 +27,7 @@ const App = () => {
         <Routes>  
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/categories/:categoryID" element={<ItemListContainer />} />
-          <Route path="/product/:id" element={<ItemDetailContainer />} />
+          <Route path="/product/:id" element={<ItemDetailContainer />} /> //Esto genera que cuando hago click en ver detalle me lleva a ItemDetail\\ 
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<Error />} />
         </Routes>

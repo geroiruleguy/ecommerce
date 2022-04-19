@@ -4,8 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
-import barritaAmarilla from './imgs/barra-agtal-original.jpg';
-import {useNavigate,} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const styles = {
   container: {
@@ -18,7 +17,7 @@ const styles = {
   },
 };
 
-export const Item = ({producto}) => {
+export const Item = ({producto}) => { 
   
   const path = useNavigate()
   const navegar = () => {

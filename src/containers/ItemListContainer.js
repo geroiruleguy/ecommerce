@@ -24,7 +24,7 @@ export const ItemListContainer = () => {
         promise
         .then((productos) => {
                 if(categoryID) {
-                    const productosFiltrados = productos.find(p => p.category === categoryID)
+                    const productosFiltrados = productos.filter(p => p.category === categoryID)
                     setProductos(productosFiltrados)
                     console.log(productosFiltrados);
                 } else  {
@@ -37,6 +37,10 @@ export const ItemListContainer = () => {
           });
       }, [categoryID]);
   
+    if (productos.length < 1) {
+        return <h2>Cargando</h2>
+    }
+
 
     return(
         <div> 

@@ -1,35 +1,33 @@
-import React from "react";
 
-
-export const ListaProductos = () => {
+export const ListaProductos =  
     [
         { 
             id: 1, 
             title: "Producto1", 
             price: 1000, 
             category: "barraCereal",
-            img: '../components/imgs/barra-agtal-original.jpg'
+            img: '/imgs/barra-agtal-original.jpg'
         },
         { 
             id: 2, 
             title: "Producto2", 
             price: 1000,
             category: "barraArroz", 
-            img: '../components/imgs/barra-crowie-frutilla.jpg'
+            img: '/imgs/barra-crowie-frutilla.jpg'
         },
         { 
             id: 3, 
             title: "Producto3", 
             price: 1000, 
             category: "snack",
-            img: '../components/imgs/snack-deluxe-verdeo.jpg'
+            img: '/imgs/snack-deluxe-verdeo.png'
         },
         { 
             id: 4,
             title: "Producto4", 
             price: 1000,
             category: "mix",
-            img: '../components/imgs/mix-nuts.jpg' 
+            img: '/imgs/mix-nuts.jpg' 
         },
         { 
             id: 5,
@@ -43,7 +41,18 @@ export const ListaProductos = () => {
             price: 1000,
             category: "producto6" 
         },
-    ]
+    ];
 
+ 
+
+    export const ListaProducto = 
+        { 
+            id: 1, 
+            title: "Producto1", 
+            price: 1000, 
+            category: "barraCereal",
+            img: '/imgs/barra-agtal-original.jpg',
+            description: 'Descripción del producto detallado.'
+
+        };   
    
-};

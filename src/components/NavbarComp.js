@@ -1,9 +1,9 @@
 import React from "react";
-import NavbarStyle from "./NavbarStyle.css";
+import "./NavbarStyle.css";
 import {Navbar, Container, Nav} from "react-bootstrap" 
 import { CartWidget } from "./CartWidgets/CartWidget";
 import logo from "./imgs/logo.png";
-import {NavLink, Link} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 const categories = [
