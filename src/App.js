@@ -7,7 +7,7 @@ import { ItemDetailContainer } from "./containers/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Cart } from "./components/Cart/Cart";
 import { Error } from "./components/Error/Error";
-import { CustomProvider } from "../Context/CartContext";
+import { CustomProvider } from "./Context/CartContext";
 
 
 
