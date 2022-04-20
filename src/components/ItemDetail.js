@@ -52,7 +52,7 @@ const detailStyles = {
   color: "black",
   display: "flex",
   flexDirection: "row",
-}
+};
        
         
   

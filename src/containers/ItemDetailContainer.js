@@ -21,7 +21,6 @@ export const ItemDetailContainer = () => {
 
     useEffect(() => {
         promise.then((prod) => {
-
             if(id) {
                 const filtrarProducto = prod.find(producto => producto.id == id );
                 setProducto(filtrarProducto);
