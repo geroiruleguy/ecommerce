@@ -25,7 +25,7 @@ export const Item = ({producto}) => {
   //   path("/categories/item" + producto.id)
   // }
   
-const URL = `/producto/${producto.id}`
+  const URL = `/producto/${producto.id}` 
 
   return(
 
@@ -50,7 +50,7 @@ const URL = `/producto/${producto.id}`
       <CardActions>
         <Link to={URL}>
           <Button size="small" color="primary">
-            Agregar al carrito
+            Ver detalles
           </Button>
         </Link>
       </CardActions>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 
 
@@ -21,9 +22,15 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
   return (
     <div>
       <button onClick={handlerAdd}>+</button>
-      <span>{count}</span>
+      <span style = {counterStyles}>{count}</span>
       <button onClick={handlerSubtract}>-</button>
+      <Link to='/cart'>
       <button onClick={handlerAddToCart}>Agregar al Carrito</button>
+      </Link>
     </div>
   );
 };
+
+const counterStyles = {
+  color: "black"
+}
