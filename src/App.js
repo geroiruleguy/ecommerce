@@ -7,8 +7,7 @@ import { ItemDetailContainer } from "./containers/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Cart } from "./components/Cart/Cart";
 import { Error } from "./components/Error/Error";
-
-
+import { CustomProvider } from "../Context/CartContext";
 
 
 
@@ -22,7 +21,8 @@ const styles = {
 const App = () => {
   return(
     <BrowserRouter>
-      <div className="App-header" style = {styles}>
+      <CustomProvider>  
+      <div className="App-header" style = {styles}>  
         <NavbarComp  />
         <Routes>  
           <Route path="/" element={<ItemListContainer />} />
@@ -31,9 +31,8 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<Error />} />
         </Routes>
-        
-      
       </div>  
+      </CustomProvider>
     </BrowserRouter>  
   );
 };

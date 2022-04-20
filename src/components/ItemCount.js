@@ -32,5 +32,5 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
 };
 
 const counterStyles = {
-  color: "black"
+  color: "grey"
 }

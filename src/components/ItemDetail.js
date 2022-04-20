@@ -1,16 +1,17 @@
-import React, { useState } from "react";
-
+import React, { useState, useContext } from "react";
 import { ItemCount } from './ItemCount';
+import { contexto } from '../Context/CartContext';
  
 
 
 export const ItemDetail = ({producto}) => {
 
-    const [agregar, setAgregar] = useState(false);
-
+    // const [agregar, setAgregar] = useContext(false);
+    const { agregarProducto } = useContext(contexto)
+    const [agregar, setAgregar] = useState(false)
     const onAdd = (contador) => {
-      console.log(`Se agregaran ${contador} productos al cart`);
-      setAgregar(true);
+      agregarProducto({cantidad: contador, id: producto.id, producto: producto.title, precio:producto.price})
+      setAgregar(true)
     };
 
 
@@ -22,8 +23,8 @@ export const ItemDetail = ({producto}) => {
 
           <div style={styles}>
             <img src={producto.img} alt={producto.title} />
-            <h1>{producto.title}</h1>
-            <span style={detailStyles}>{producto.price}</span>
+            <h1 style={detailStyles}>{producto.title}</h1>
+            <span style={detailStyles}>$ {producto.price}</span>
             <p style={detailStyles}>Stock: {producto.stock}</p>
             <p style={detailStyles}>{producto.description}</p>
             
@@ -38,7 +39,6 @@ export const ItemDetail = ({producto}) => {
 };
         
 const styles = {
-  flexDirection: "row",
   justifyContent: "center",
   alignItems: "top",
   marginLeft: 250,
@@ -49,9 +49,9 @@ const styles = {
 };
 
 const detailStyles = {
-  color: "black",
+  color: "grey",
   display: "flex",
-  flexDirection: "row",
+  flexDirection: "column",
 };
        
         
