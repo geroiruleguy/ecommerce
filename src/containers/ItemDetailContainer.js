@@ -1,41 +1,41 @@
 import React, {useState, useEffect} from "react";
 import { ItemDetail } from "../components/ItemDetail";
-import { ListaProducto } from "../Productos/ListaProductos";
+import { ListaProductos } from "../Productos/ListaProductos";
 import { useParams } from "react-router-dom"; 
 
 
 
 const promise = new Promise ((res, rej) => {
     setTimeout(() => {
-        res(ListaProducto);
-        console.log(ListaProducto);
+        res(ListaProductos);
     }, (2000));
 });
 
 export const ItemDetailContainer = () => {
     
-    const [producto, setProducto] = useState([]);
+    const [producto, setProducto] = useState({});
+    const [loading, setLoading] = useState(true);
   
 
     const {id} = useParams();
 
     useEffect(() => {
         promise.then((prod) => {
-
-                if(id) {
-                    const filtrarProducto = prod.filter(producto => producto.id === id )
-                    console.log(filtrarProducto[0]);
-                
-                } else  {
-                setProducto(producto)
-                } 
-            })
-        
+            if(id) {
+                const filtrarProducto = prod.find(producto => producto.id == id );
+                setProducto(filtrarProducto);
+                setLoading(false);
+            }
+        })
         .catch((error) => {
             console.error("error: ", error);
           });
       }, [id]);
   
+
+    if(loading){
+        return <h2>Cargando!</h2>
+    }
 
     return(
         <div> 
