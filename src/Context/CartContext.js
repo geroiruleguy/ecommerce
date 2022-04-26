@@ -27,7 +27,7 @@ export const CustomProvider = ({ children }) => {
 
     const eliminarProducto = (id) => {
        
-        const eliminarProducto =cart.filter((producto) => producto.id !== Number(idCarrito) )
+        const eliminarProducto =cart.filter((producto) => producto.id !== Number(id) )
         setCart(eliminarProducto)
       };
       
@@ -49,7 +49,7 @@ export const CustomProvider = ({ children }) => {
             cantidad = cantidad + producto.cantidad;
             sumaPrecioCantidad = sumaPrecioCantidad + (producto.cantidad * producto.precio)
         });
-        setCartTotals ([...cart, producto])
+        setCartTotals ({cantidad: cantidad, precio: sumaPrecioCantidad})
         return cartTotals
     };
     

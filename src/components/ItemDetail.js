@@ -6,7 +6,7 @@ import { contexto } from '../Context/CartContext';
 
 export const ItemDetail = ({producto}) => {
 
-    // const [agregar, setAgregar] = useContext(false);
+   
     const { agregarProducto } = useContext(contexto)
     const [agregar, setAgregar] = useState(false)
     const onAdd = (contador) => {
@@ -24,7 +24,7 @@ export const ItemDetail = ({producto}) => {
           <div style={styles}>
             <img src={producto.img} alt={producto.title} />
             <h1 style={detailStyles}>{producto.title}</h1>
-            <span style={detailStyles}>$ {producto.price}</span>
+            <span style={detailStyles}>$ {producto.price}</span> 
             <p style={detailStyles}>Stock: {producto.stock}</p>
             <p style={detailStyles}>{producto.description}</p>
             
