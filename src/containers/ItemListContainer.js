@@ -35,6 +35,7 @@ export const ItemListContainer = () => {
 
         } else{
             q = productsCollection;
+            setProductos(productos)
 
         }
         
