@@ -4,6 +4,7 @@ import { ItemDetail } from "../components/ItemDetail";
 import { ListaProductos } from "../Productos/ListaProductos";
 import { useParams } from "react-router-dom"; 
 import { db } from "../firebase/firebase";
+import { CircularProgress } from '@mui/material';
 
 
 
@@ -33,9 +34,9 @@ export const ItemDetailContainer = () => {
 
 
 
-        promise.then((prod) => {
+        promise.then((producto) => {
             if(id) {
-                const filtrarProducto = prod.find(producto => producto.id == id );
+                const filtrarProducto = producto.find(producto => producto.id == id );
                 setProducto(filtrarProducto);
                 setLoading(false);
             }
@@ -47,14 +48,14 @@ export const ItemDetailContainer = () => {
       }, [id]);
   
 
-    if(loading){
-        return <h2>Cargando!</h2>
-    }
+    
   
 
     return(
         <div> 
-            <ItemDetail producto={ producto } />
+            {loading ?  
+            (<span> <CircularProgress /> </span>) 
+            : <ItemDetail producto={ producto } />}
         </div>
     );
    

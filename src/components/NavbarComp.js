@@ -7,10 +7,10 @@ import { NavLink } from "react-router-dom";
 
 
 const categories = [
-  { name: "Barra de Cereal", route: "categories/barritas", id: "barraCereal"},
-  { name: "Barra de Arroz", route: "categories/barritas", id: "barraArroz" },
+  { name: "Barritas", route: "categories/barritas", id: "barritas"},
+  { name: "Galletas", route: "categories/galletas", id: "galletas" },
   { name: "Snacks", route: "categories/snacks", id: "snacks"},
-  { name: "Mix Frutos Secos", route: "categories/mixed", id: "mixed"},
+  { name: "Mix Frutos Secos", route: "categories/mix", id: "mix"},
 ]
 
 

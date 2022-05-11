@@ -5,7 +5,7 @@ export const ListaProductos =
             id: 1, 
             title: "Barras &Joy Mixed Nutz Agtal - Sabor Original (x 12u)", 
             price: 395, 
-            category: "Barritas",
+            category: "barritas",
             img: '/imgs/barra-agtal-original.jpg',
             description: 'Display con 12 unidades de 30g c/u. Producto de alta calidad, saludable, práctico y delicioso, hecho con nueces brasileras y frutas con la perfecta combinación entre sabores dulces y salados.',
             stock: 10,
@@ -14,7 +14,7 @@ export const ListaProductos =
             id: 2, 
             title: "Barras de arroz Crowie - Sabor Yogurt de Frutilla", 
             price: 250,
-            category: "Barritas", 
+            category: "barritas", 
             img: '/imgs/barra-crowie-frutilla.jpg',
             description: 'Descripción del producto detallado.',
             stock: 10,
@@ -53,6 +53,15 @@ export const ListaProductos =
             description: 'Descripción del producto detallado.',
             stock: 10, 
         },
+        {
+            id: 7,
+            title: "Galleta de arroz Sin Gluten Deluxe bañada en Chocolate", 
+            price: 100,
+            category: "galletas",
+            img: '/imgs/galleta-deluxe-chocolate.jpg',
+            description: 'Galletitas de arroz Deluxe Bañada en Chocolate. Crocante galletita elaborada con arroz integral, baño de Chocolate. Snack ideal para sacarte las ganas de algo dulce, sano y natural. Y sin gluten!',
+            stock: 10, 
+        }
     ];
 
  
@@ -62,7 +71,7 @@ export const ListaProductos =
             id: 1, 
             title: "Producto1", 
             price: '$1000', 
-            category: "barraCereal",
+            category: "barritas",
             img: '/imgs/barra-agtal-original.jpg',
             description: 'Descripción del producto detallado.',
             stock: 10,
