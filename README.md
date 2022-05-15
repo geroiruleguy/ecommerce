@@ -16,4 +16,5 @@ AUTOR
 Trabajo desarrollado y diseñado por Gerónimo Iruleguy en el curso de React JS de Coderhouse. 
 
 VISTA
+
 ![GIF](https://user-images.githubusercontent.com/92894621/168497024-76a825bd-de92-423f-bc37-dd44688ad690.gif)
