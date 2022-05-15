@@ -16,4 +16,4 @@ AUTOR
 Trabajo desarrollado y diseñado por Gerónimo Iruleguy en el curso de React JS de Coderhouse. 
 
 VISTA
-
+![image] (https://github.com/geroiruleguy/ecommerce/blob/main/GIF.gif)
