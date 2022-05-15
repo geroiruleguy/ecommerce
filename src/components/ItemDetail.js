@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { ItemCount } from './ItemCount';
 import { contexto } from '../Context/CartContext';
+import './ItemDetail.css';
  
 
 
@@ -16,13 +17,13 @@ export const ItemDetail = ({producto}) => {
 
 
     if(!producto){
-      return 'No hay nada'
+      return 'No se puede encontrar el producto que buscas'
     }
 
         return(
 
-          <div style={styles}>
-            <img src={producto.img} alt={producto.title} />
+          <div className="itemDetailContainer">
+            <img className="detailIgm" src={producto.img} alt={producto.title} />
             <h1 style={detailStyles}>{producto.title}</h1>
             <span style={detailStyles}>$ {producto.price}</span> 
             <p style={detailStyles}>Stock: {producto.stock}</p>
@@ -38,20 +39,11 @@ export const ItemDetail = ({producto}) => {
 
 };
         
-const styles = {
-  justifyContent: "center",
-  alignItems: "top",
-  marginLeft: 250,
-  marginRight: 250,
-  marginTop: 50,
-  marginBottom: 100,          
-  backgroundColor: "white", 
-};
+
 
 const detailStyles = {
   color: "grey",
-  display: "flex",
-  flexDirection: "column",
+ 
 };
        
         

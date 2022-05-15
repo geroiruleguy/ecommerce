@@ -25,7 +25,7 @@ const App = () => {
       <div className="App-header" style = {styles}>  
         <NavbarComp  />
         <Routes>  
-          <Route path="/" element={<ItemListContainer greeting="Bienvenido a Prodables"/> } />
+          <Route path="/" element={<ItemListContainer/> } />
           <Route path="/categories/:categoryID" element={<ItemListContainer />} />
           <Route path="/producto/:id" element={<ItemDetailContainer />} />  
           <Route path="/cart" element={<Cart />} />

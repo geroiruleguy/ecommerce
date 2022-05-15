@@ -4,7 +4,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
-// import { useNavigate } from "react-router-dom";
 import {Link} from "react-router-dom";
 
 const styles = {
@@ -20,10 +19,6 @@ const styles = {
 
 export const Item = ({producto}) => { 
   
-  // const path = useNavigate()
-  // const navegar = () => {
-  //   path("/categories/item" + producto.id)
-  // }
   
   const URL = `/producto/${producto.id}` 
 

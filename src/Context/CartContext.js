@@ -26,9 +26,7 @@ export const CustomProvider = ({ children }) => {
     };
 
     const eliminarProducto = (id) => {
-       
-        const eliminarProducto = cart.filter((producto) => producto.id !== Number(id) )
-        setCart(eliminarProducto)
+      setCart(cart.filter(producto => producto.id == id))
       };
       
       const IsinCart = (id) => {
@@ -46,12 +44,20 @@ export const CustomProvider = ({ children }) => {
         const sumaPrecioCantidad = 0
         
         cart.forEach(producto => {
-            cantidad = cantidad + producto.cantidad;
+            cantidad = cantidad + producto.quantity;
             sumaPrecioCantidad = sumaPrecioCantidad + (producto.cantidad * producto.precio)
         });
         setCartTotals ({cantidad: cantidad, precio: sumaPrecioCantidad})
         return cartTotals
     };
+
+    const getPrecioTotalCarrito = () =>{
+      let precioTotal = 0;
+      for(let i = 0; i < cart.length; i++){
+          precioTotal += (cart[i].precio * cart[i].cantidad)
+      }
+      return precioTotal;
+  }
     
       const clearCart = () => {
         setCart([]);
@@ -64,6 +70,7 @@ export const CustomProvider = ({ children }) => {
         eliminarProducto,
         IsinCart,
         cantidadEnCart,
+        getPrecioTotalCarrito,
         clearCart
       }
     

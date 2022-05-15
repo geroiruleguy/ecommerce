@@ -11,7 +11,11 @@ const style = {
     }
 }
 
+
+   
+
 export const CartWidget = () => {
+
     return (
         <div style={style.container}>
             <ShoppingCart />

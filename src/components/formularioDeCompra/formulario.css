@@ -1,0 +1,13 @@
+.finalizarCompra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formStyle{
+    display: flex;
+    flex-direction: column;
+}
+.labelForm{
+    color: black;
+}
