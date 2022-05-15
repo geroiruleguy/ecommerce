@@ -27,7 +27,7 @@ export const CustomProvider = ({ children }) => {
 
     const eliminarProducto = (id) => {
        
-        const eliminarProducto =cart.filter((producto) => producto.id !== Number(id) )
+        const eliminarProducto = cart.filter((producto) => producto.id !== Number(id) )
         setCart(eliminarProducto)
       };
       

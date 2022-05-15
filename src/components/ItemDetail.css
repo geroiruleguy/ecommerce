@@ -1,0 +1,15 @@
+.itemDetailContainer{
+    justify-content: left;
+    align-items: top;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 100px;
+    margin-bottom: 100px;          
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.detailIgm{
+    width: 500px;
+    height: 500px;
+}

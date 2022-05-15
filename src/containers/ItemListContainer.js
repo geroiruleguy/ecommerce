@@ -2,19 +2,13 @@ import React, {useState, useEffect} from "react";
 import { getDocs, collection, query, where } from "firebase/firestore";
 import "./ItemListContainer.css"
 import { ItemList } from "../components/ItemList";
-import { ListaProductos } from "../Productos/ListaProductos";
 import { useParams } from "react-router-dom"; 
 import { db } from "../firebase/firebase";
 import { CircularProgress } from '@mui/material';
 
 
 
-    const promise = new Promise ((res, rej) => {
-        setTimeout(() => {
-            res(ListaProductos);
-            console.log(ListaProductos);
-        }, (2000));
-    });
+
 
 
 export const ItemListContainer = ({greeting}) => {
