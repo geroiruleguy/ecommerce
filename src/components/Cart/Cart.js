@@ -65,23 +65,25 @@ export const Cart = () => {
  
     const carritoConProductos = cart.map((producto) =>{ 
             return (
-            <li className='detallesDeProductosEnCarrito' style={estilos} key={producto.id}> 
-                
+            <div className='detallesDeProductosEnCarrito' style={estilos} key={producto.id}> 
                 <p>Producto: {producto.producto}</p>
                 <p>Cantidad:{producto.cantidad}</p>
                 <p>Precio: ${producto.precio}</p> 
                 <p>SubTotal: ${producto.cantidad*producto.precio}</p>
                 <button  id={producto.id} onClick={(()=>eliminarProducto(producto.id))}>Borrar</button> 
-            </li> )})
+            </div> 
+            
+            
+            )})
 
-        
+            
     return (
     <div>    
         {carritoVacio && 
             <>
                 <div className='detallesDeProductosEnCarrito'>
                     {carritoConProductos}
-                    <p>Precio Total ${getPrecioTotalCarrito()}</p>
+                    <p style={estilos}>Precio Total: ${getPrecioTotalCarrito()} </p>
                 </div>
                   
                 <button onClick={emptyCart}>Vaciar Carrito</button>
